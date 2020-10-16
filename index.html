@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="./script/utils/db.js"></script>
+    <script src="./script/utils/utility.js"></script>
+    <script src="./script/utils/config.js"></script>
+    <script src="./script/model/task.js"></script>
+    <script src="./script/model/taskOperation.js"></script>
+    <script src="./script/controller.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+    <div class="alert-info text-center">
+        <label for="TodoApp"><h1>TodoApp</h1></label>
+    </div>
+    <div class="form-group">
+        <label for="Id">Id</label>
+        <label id="txetId" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input id="txetName" class="form-control" type="text" placeholder="Inptu Your Name">
+    </div>
+    <div class="form-group">
+        <label for="name">Date</label>
+        <input id="txetDate" class="form-control" type="date" placeholder="Inptu Your Name">
+    </div>
+    <div class="form-group">
+        <label for="name">Description</label>
+        <textarea id="textDisc" class="form-control" cols="30" rows="10" placeholder="Input your Description"></textarea>
+    </div>
+    <div class="button  btn-bordered">
+        <button id="add" class="btn btn-success">Add</button>
+        <button id="delete" class="btn btn-danger">Delete</button>
+        <button id="search" class="btn btn-success">Search</button>
+        <button id="localSave" class="btn btn-info">LocalSave</button>
+        <button id="loadlocal" class="btn btn-primary">Loadlocal</button>
+    </div>
+    <div id="searchdiv">
+        <fieldset>
+            <legend>Serach Task</legend>
+            <input class="form-control" type="text" id="searchbox" placeholder="Search a value">
+        </fieldset>
+    </div>
+    <br>
+    <div class="text_font">
+        <h3>Total Records are <span id="total"></span>  Mark Records are
+            <span id="mark"></span>
+             UnMark Records are <span id="unmark"></span> </h3>
+    </div>
+    <br>
+        <table class="table table-bordered">
+            <thead class="border table-dark">
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Discription</td>
+                    <td>Date</td>
+                    <td>Operatopn</td>
+                </tr>
+            </thead>
+            <tbody id="theadDisc" class="alert-info">
+                
+            </tbody>
+        </table>
+</div>
+</body>
+</html>
